@@ -1,6 +1,4 @@
 $(function() {
-
-    document.getElementById("sendform").onclick(function () {
          $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -64,7 +62,6 @@ $(function() {
     $("a[data-toggle=\"tab\"]").click(function(e) {
         e.preventDefault();
         $(this).tab("show");
-    });
     });
 });
 

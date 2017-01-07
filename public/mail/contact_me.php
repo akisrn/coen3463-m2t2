@@ -23,6 +23,12 @@ $email_body = "You have received a new message from your website contact form.\n
 "Here are the details:\n\n Name : " $name "\n\nEmail: " $email_address "\n\nPhone: " $phone "\n\nMessage:\n" $message;
 $headers = "From: noreply@thewashingwell.com\n";
 $headers .= "Reply-To: "$email_address;	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+$mail = mail($to,$email_subject,$email_body,$headers);
+
+if($mail){
+   return true;   
+  echo "Thank you for using our mail form";
+}else{
+  echo "Mail sending failed."; 
+}		
 ?>
