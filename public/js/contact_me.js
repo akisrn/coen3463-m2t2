@@ -1,6 +1,7 @@
 $(function() {
 
-    $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+    document.getElementById("sendform").onclick(function () {
+         $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -40,7 +41,6 @@ $(function() {
                         .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
@@ -64,6 +64,7 @@ $(function() {
     $("a[data-toggle=\"tab\"]").click(function(e) {
         e.preventDefault();
         $(this).tab("show");
+    });
     });
 });
 
